@@ -1,0 +1,28 @@
+server:
+  port: 8081
+logging:
+  level:
+    org:
+      framework: debug
+spring:
+  profile:
+    active: local
+  data:
+    jpa:
+      repositories:
+        bootstrap-mode: default
+  datasource:
+    url: jdbc:mysql://localhost:3306/bookmyShowDB
+    username: hbstudent
+    password: hbstudent
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    defer-datasource-initialization: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        generate_statistics: false
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
